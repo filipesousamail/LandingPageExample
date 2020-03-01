@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 1.2rem;
+}
+
+ul,
+nav {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.9;
+
+  & .btn {
+    color: whitesmoke;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: #2196f3;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  & hover {
+    opacity: 1;
+  }
+}
+
+header {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: whitesmoke;
+  padding-top: 1rem;
+  max-width: 80vw;
+  margin: auto;
+
+  & .support-bar-area {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+
+    & .support-contact-info > span {
+      margin-right: 1.5rem;
+    }
+
+    & .social-links > * {
+      margin-right: 1rem;
+    }
+  }
+
+  & .nav-links-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & nav {
+      display: flex;
+
+      & li {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}
+
+section.hero-area.hero-bg {
+  background-image: url(./assets/images/hero-background.jpg);
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  color: red;
+
+  & .container {
+    max-width: 80vw;
+    margin: auto;
+    flex: 1;
+    height: 100%;
+
+    & .hero-txt {
+      color: whitesmoke;
+      margin-top: 200px;
+    }
+  }
+}
