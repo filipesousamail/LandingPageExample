@@ -23,13 +23,22 @@ a {
   cursor: pointer;
   opacity: 0.9;
 }
-a .btn {
+a.btn {
   color: whitesmoke;
   border-radius: 4px;
   text-transform: uppercase;
   background-color: #2196f3;
   font-weight: 800;
   text-align: center;
+}
+a.btn-flat {
+  color: whitesmoke;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  border: 1px solid;
+  padding: 10px 5px;
 }
 a hover {
   opacity: 1;
@@ -68,13 +77,15 @@ header .nav-links-area nav {
 header .nav-links-area nav li {
   margin-right: 1.5rem;
 }
+header .nav-links-area img.logo {
+  width: 130px;
+}
 
 section.hero-area.hero-bg {
-  background-image: url(./assets/images/hero-background.jpg);
-  background-size: cover;
-  height: 100vh;
+  width: 1440px;
+  height: 780px;
   display: flex;
-  background: center;
+  background: linear-gradient(rgba(20, 48, 65, 0.6), rgba(0, 48, 65, 0.6)), url(./assets/images/back3.jpg) center;
 }
 section.hero-area.hero-bg .container {
   max-width: 80vw;
@@ -84,7 +95,14 @@ section.hero-area.hero-bg .container {
 }
 section.hero-area.hero-bg .container .hero-txt {
   color: whitesmoke;
-  margin-top: 200px;
+  padding-top: 300px;
+}
+section.hero-area.hero-bg .container .hero-txt .brand {
+  font-size: 2rem;
+  font-weight: 500;
+}
+section.hero-area.hero-bg .container .hero-txt .slogan {
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=index.css.map */
