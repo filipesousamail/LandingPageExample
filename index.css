@@ -72,9 +72,9 @@ header .nav-links-area nav li {
 section.hero-area.hero-bg {
   background-image: url(./assets/images/hero-background.jpg);
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   display: flex;
-  color: red;
+  background: center;
 }
 section.hero-area.hero-bg .container {
   max-width: 80vw;

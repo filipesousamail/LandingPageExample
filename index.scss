@@ -81,9 +81,8 @@ header {
 section.hero-area.hero-bg {
   background-image: url(./assets/images/hero-background.jpg);
   background-size: cover;
-  height: 90vh;
+  width: 100vw;
   display: flex;
-  color: red;
 
   & .container {
     max-width: 80vw;
