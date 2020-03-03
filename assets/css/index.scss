@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   font-family: Poppins, sans-serif;
   font-size: 1.2rem;
+  display: grid;
+  grid-template: 10% 1fr 10%;
 }
 
 ul,
@@ -23,27 +23,23 @@ a {
   color: inherit;
   cursor: pointer;
   opacity: 0.9;
+}
 
-  &.btn {
-    color: whitesmoke;
-    border-radius: 4px;
-    text-transform: uppercase;
-    background-color: #2196f3;
-    font-weight: 800;
-    text-align: center;
-  }
+.btn {
+  background-color: #2196f3;
+  color: whitesmoke;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  border: 1px solid;
+  padding: 10px 5px;
 
   &.btn-flat {
-    color: whitesmoke;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-weight: 800;
-    text-align: center;
-    border: 1px solid;
-    padding: 10px 5px;
+    background-color: transparent;
   }
 
-  & hover {
+  &:hover {
     opacity: 1;
   }
 }
@@ -77,6 +73,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 1rem;
 
     & nav {
       display: flex;
@@ -86,8 +83,9 @@ header {
       }
     }
 
-    & img.logo {
-      width: 130px;
+    & svg {
+      width: 25%;
+      margin-bottom: 1.5rem;
     }
   }
 }
@@ -98,12 +96,11 @@ section.hero-area.hero-bg {
   display: flex;
   background: 
   /* top transparent blue */ linear-gradient(rgba(20, 48, 65, 0.6), rgba(0, 48, 65, 0.6)),
-    /* bottom, image */ url(./assets/images/back3.jpg) center;
+    /* bottom, image */ url(../images/back3.jpg) center;
 
   & .container {
     max-width: 80vw;
     margin: auto;
-    flex: 1;
     height: 100%;
 
     & .hero-txt {
@@ -113,6 +110,10 @@ section.hero-area.hero-bg {
       & .brand {
         font-size: 2rem;
         font-weight: 500;
+
+        &::first-letter {
+          font-size: 4rem;
+        }
       }
 
       & .slogan {

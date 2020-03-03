@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   font-family: Poppins, sans-serif;
   font-size: 1.2rem;
+  display: grid;
+  grid-template: 10% 1fr 10%;
 }
 
 ul,
@@ -23,15 +23,9 @@ a {
   cursor: pointer;
   opacity: 0.9;
 }
-a.btn {
-  color: whitesmoke;
-  border-radius: 4px;
-  text-transform: uppercase;
+
+.btn {
   background-color: #2196f3;
-  font-weight: 800;
-  text-align: center;
-}
-a.btn-flat {
   color: whitesmoke;
   border-radius: 4px;
   text-transform: uppercase;
@@ -40,7 +34,10 @@ a.btn-flat {
   border: 1px solid;
   padding: 10px 5px;
 }
-a hover {
+.btn.btn-flat {
+  background-color: transparent;
+}
+.btn:hover {
   opacity: 1;
 }
 
@@ -70,6 +67,7 @@ header .nav-links-area {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1rem;
 }
 header .nav-links-area nav {
   display: flex;
@@ -77,20 +75,20 @@ header .nav-links-area nav {
 header .nav-links-area nav li {
   margin-right: 1.5rem;
 }
-header .nav-links-area img.logo {
-  width: 130px;
+header .nav-links-area svg {
+  width: 25%;
+  margin-bottom: 1.5rem;
 }
 
 section.hero-area.hero-bg {
   width: 1440px;
   height: 780px;
   display: flex;
-  background: linear-gradient(rgba(20, 48, 65, 0.6), rgba(0, 48, 65, 0.6)), url(./assets/images/back3.jpg) center;
+  background: linear-gradient(rgba(20, 48, 65, 0.6), rgba(0, 48, 65, 0.6)), url(../images/back3.jpg) center;
 }
 section.hero-area.hero-bg .container {
   max-width: 80vw;
   margin: auto;
-  flex: 1;
   height: 100%;
 }
 section.hero-area.hero-bg .container .hero-txt {
@@ -100,6 +98,9 @@ section.hero-area.hero-bg .container .hero-txt {
 section.hero-area.hero-bg .container .hero-txt .brand {
   font-size: 2rem;
   font-weight: 500;
+}
+section.hero-area.hero-bg .container .hero-txt .brand::first-letter {
+  font-size: 4rem;
 }
 section.hero-area.hero-bg .container .hero-txt .slogan {
   font-size: 3rem;
