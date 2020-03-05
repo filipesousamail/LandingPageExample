@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -131,7 +135,7 @@ section.contact .contact-form {
 }
 section.contact form textarea {
   width: 100%;
-  height: 12rem;
+  height: 10rem;
   padding-top: 1rem;
   padding-left: 1rem;
   border: 1px solid #a5a4a4;
@@ -172,21 +176,21 @@ footer ul > li {
   margin-right: 1rem;
 }
 
-.back-to-top.show {
+#back-to-top.show {
   opacity: 1;
   right: 30px;
 }
 
-.back-to-top {
+#back-to-top {
   background-color: rgba(255, 204, 9, 0.9);
   border: 1px solid rgba(255, 204, 9, 0.9);
 }
 
-.back-to-top {
+#back-to-top {
   bottom: 30px;
-  right: 0;
+  right: 30px;
   position: fixed;
-  color: #fff;
+  color: whitesmoke;
   height: 40px;
   width: 40px;
   line-height: 40px;

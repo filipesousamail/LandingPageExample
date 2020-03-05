@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header>
+  <header id="home">
     <svg width="300" height="55" viewBox="0 0 300 55" fill="none" xmlns="http://www.w3.org/2000/svg">
       <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.0947571" y="0.104004" width="300" height="55"
         fill="black">
@@ -108,7 +108,7 @@
     </svg>
     <nav>
       <li><a href="#">Serviços</a></li>
-      <li><a href="#">Contacto</a></li>
+      <li><a href="#contact">Contacto</a></li>
       <li><a href="#" class="btn">Orçamento</a></li>
     </nav>
   </header>
@@ -120,14 +120,14 @@
       class="btn" target="_blank">Obter direcções</a>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <div class="contact-form">
       <p class="section-title">A sua opinião é muito importante para nós, envie-nos a sua mensagem.</p>
       <form>
-          <input name="name" type="text" placeholder="Nome">
-          <input name="email" type="email" placeholder="Email">
-          <input name="subject" type="text" placeholder="Assunto">
-          <textarea name="message" cols="30" rows="10" placeholder="Deixe a sua mensagem..."></textarea>
+        <input name="name" type="text" placeholder="Nome">
+        <input name="email" type="email" placeholder="Email">
+        <input name="subject" type="text" placeholder="Assunto">
+        <textarea name="message" cols="30" rows="10" placeholder="Deixe a sua mensagem..."></textarea>
         <input class="btn" type="submit" value="Enviar">
       </form>
     </div>
@@ -159,9 +159,13 @@
     </p>
   </footer>
 
-  <div class="back-to-top show">
-    <i class="fas fa-chevron-up"></i>
-  </div>
+  <!-- Back to top button -->
+  <a id="back-to-top" href="#" class="fas fa-chevron-up"></a>
 </body>
+
+<footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</footer>
 
 </html>
