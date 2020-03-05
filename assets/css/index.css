@@ -87,7 +87,7 @@ header {
   padding: 1.5rem 5% 0;
 }
 header svg {
-  width: 15rem;
+  width: 14rem;
   margin-bottom: 1.5rem;
 }
 header nav {
@@ -95,6 +95,15 @@ header nav {
 }
 header nav li {
   margin-right: 1.5rem;
+}
+
+p.section-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.section-title-container {
+  text-align: center;
 }
 
 section.hero-bg {
@@ -121,21 +130,42 @@ section.hero-bg a {
   margin: 2rem 0;
 }
 
-section.contact {
-  padding-top: 1rem;
+.slick-slide:focus, .slick-slide a {
+  outline: none;
+}
+
+section#sale {
+  width: 100vw;
+  margin: 0 auto;
+  color: #a5a4a4;
+}
+section#sale .single-sale {
+  max-width: 25rem;
+  padding: 2rem 1rem 2rem 1rem;
+}
+section#sale .single-sale .sale-txt > * {
+  margin-bottom: 1rem;
+}
+section#sale .single-sale img {
+  width: 100%;
+}
+section#sale .single-sale .username {
+  color: rgba(255, 204, 9, 0.9);
+}
+
+section#contact {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #a5a4a4;
+}
+section#contact .contact-section-content-container {
   display: flex;
   justify-content: space-evenly;
-  color: #a5a4a4;
-  margin: 0 2rem;
 }
-section.contact p.section-title {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-section.contact .contact-form {
+section#contact .contact-form {
   max-width: 50%;
 }
-section.contact form textarea {
+section#contact form textarea {
   width: 100%;
   height: 10rem;
   padding-top: 1rem;
@@ -144,18 +174,15 @@ section.contact form textarea {
   outline: 0;
   border-radius: 1px;
 }
-section.contact form input {
+section#contact form input {
   margin-bottom: 1rem;
 }
-section.contact form input.btn {
-  float: right;
-}
-section.contact .contact-info .icon-wrapper {
+section#contact .contact-info .icon-wrapper {
   display: flex;
   align-items: center;
   margin: 2rem;
 }
-section.contact .contact-info .icon-wrapper > i {
+section#contact .contact-info .icon-wrapper > i {
   color: rgba(255, 204, 9, 0.9);
   margin-right: 0.5rem;
 }
