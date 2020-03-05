@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $(window).scroll(debounce(function () {
-        if (this.scrollY > this.innerHeight) {
+        if (this.scrollY > 200) {
             $('#back-to-top').addClass('show');
         } else {
             $('#back-to-top').removeClass('show');
