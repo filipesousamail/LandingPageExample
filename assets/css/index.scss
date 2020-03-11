@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
 
-$primary-color: rgba(255, 204, 9, 0.9);
-$white-color: whitesmoke;
+$primary: rgb(255, 204, 9);
+$striped-grey: rgb(245, 245, 245);
 $light-grey: rgb(165, 164, 164);
+$white: rgb(255, 255, 255);
+$blue: rgb(26, 59, 115);
 
 html {
   scroll-behavior: smooth;
@@ -17,8 +19,8 @@ html {
 
 body {
   font-size: 1.2rem;
-  display: grid;
-  grid-template: 10% 1fr 10%;
+  // display: grid;
+  // grid-template: 10% 1fr 10%;
 }
 
 ul,
@@ -58,21 +60,22 @@ input[type="week"] {
 section {
   padding-bottom: 1rem;
   &:nth-child(even) {
-    background-color: $white-color;
+    background-color: $striped-grey;
   }
 }
 
 .btn {
-  background-color: $primary-color;
-  color: $white-color;
+  background-color: $primary;
+  color: $white;
   text-transform: uppercase;
   font-weight: 800;
   text-align: center;
-  border: 1px solid;
   padding: 10px 5px;
+  font-size: 0.7rem;
 
   &.btn-flat {
     background-color: transparent;
+    border: 1px solid;
   }
 
   &.btn-round {
@@ -84,33 +87,58 @@ section {
   }
 }
 
+.container {
+  text-align: center;
+  width: 100vw;
+}
+
+#nav {
+  // display: flex;
+  // flex-direction: column;
+  // height: 100vh;
+}
+
 header {
-  color: $white-color;
+  color: $blue;
   position: absolute;
   width: 100%;
   z-index: 1000;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  padding: 1.5rem 5% 0;
+  // padding: 1.5rem 5% 0;
 
-  & svg {
-    width: 14rem;
-    margin-bottom: 1.5rem;
+  .hide-mobile {
+    display: none;
   }
 
-  & nav {
-    display: flex;
-
-    & li {
-      margin-right: 1.5rem;
-    }
+  & .logo {
+    width: 130px;
   }
-}
 
-@media only screen and (max-width: 1140px) {
-  header {
+  & .menu {
+    background-color: $white;
   }
+
+  & nav{
+    width: 100%;
+  }
+  // & nav {
+  //   color: $white;
+  //   background-color: red;
+  //   height: 100vh;
+  //   text-align: center;
+  //   display: flex;
+  //   flex-direction: column;
+
+  //   & a {
+  //     text-align: right;
+  //   }
+
+  //   & li {
+  //     margin-right: 1.5rem;
+  //   }
+  // }
 }
 
 p.section-title {
@@ -118,67 +146,38 @@ p.section-title {
   font-weight: 500;
 }
 
-.section-title-container{
-  text-align: center;
-}
-
 section.hero-bg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 15rem 10rem;
-  color: $white-color;
-  // top: 0;
-  // left: 0;
-  // bottom: 0;
-  // right: 0;
-  // position: absolute;
+  padding: 8rem;
+  color: $white;
+  min-height: 35rem;
   display: flex;
   background: 
-  /* top transparent blue */ linear-gradient(rgba(20, 48, 65, 0.6), rgba(0, 48, 65, 0.6)),
+  /* top transparent blue */ linear-gradient(rgba(34, 40, 126, 0.514), rgba(0, 48, 65, 0)),
     /* bottom, image */ url(../images/back3.jpg) center;
+  background-size: cover;
 
-  & .brand {
-    font-size: 2rem;
-    font-weight: 500;
-
-    &::first-letter {
-      font-size: 4rem;
+  .container {
+    & .slogan {
+      margin-bottom: 2rem;
     }
-  }
-
-  & .slogan {
-    font-size: 3rem;
-  }
-
-  & a {
-    margin: 2rem 0;
-  }
-}
-
-.slick-slide {
-  &:focus, a {
-    outline: none;
   }
 }
 
 section#sale {
-  width: 100vw;
-  margin: 0 auto;
   color: $light-grey;
   & .single-sale {
-    max-width: 25rem;
-    padding: 2rem 1rem 2rem 1rem;
-
     & .sale-txt > * {
       margin-bottom: 1rem;
     }
     & img {
-      width: 100%;
+      width: 150px;
     }
     & .username {
-      color: $primary-color;
+      color: $primary;
     }
   }
 }
@@ -187,8 +186,8 @@ section#contact {
   padding-left: 1rem;
   padding-right: 1rem;
   color: $light-grey;
-  
-  & .contact-section-content-container{
+
+  & .contact-section-content-container {
     display: flex;
     justify-content: space-evenly;
   }
@@ -210,7 +209,6 @@ section#contact {
 
     & input {
       margin-bottom: 1rem;
-
     }
   }
 
@@ -221,7 +219,7 @@ section#contact {
       margin: 2rem;
 
       & > i {
-        color: $primary-color;
+        color: $primary;
         margin-right: 0.5rem;
       }
     }
@@ -233,7 +231,7 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: $white-color;
+  color: $white;
   background-color: #414a4f;
   padding: 60px 0;
 
@@ -254,20 +252,20 @@ footer {
 }
 
 #back-to-top {
-  background-color: $primary-color;
-  border: 1px solid $primary-color;
+  background-color: $primary;
+  border: 1px solid $primary;
 }
 
 #back-to-top {
   bottom: 30px;
   right: 30px;
   position: fixed;
-  color: $white-color;
+  color: $white;
   height: 40px;
   width: 40px;
   line-height: 40px;
-  background-color: $primary-color;
-  border: 1px solid $primary-color;
+  background-color: $primary;
+  border: 1px solid $primary;
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
