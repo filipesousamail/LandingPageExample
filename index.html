@@ -6,55 +6,73 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
-  <link   rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/index.css">
   <title>Auto Ismael</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="row">
       <img src="assets/images/logo2.svg" alt="auto ismael logo" class="logo">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Promoções</a>
-          <a class="nav-item nav-link" href="#">Serviços</a>
-          <a class="nav-item nav-link" href="#">Acerca de nós</a>
-          <a class="nav-item nav-link" href="#">Contacto</a>
-          <a class="nav-item nav-link btn" href="#">Orçamento Grátis</a>
-        </div>
-      </div>
-    </nav>
+<div class="spacer" style="flex-grow: 1;"></div>
+      <nav>
+        <a href="#" class="hide-desktop">
+          <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+        </a>
+        <ul class="fa-solid:ellipsis-v" id="nav">
+          <li><a href="#">inicio</a></li>
+          <li><a href="#">porquê nós</a></li>
+          <li><a href="#">servicos</a></li>
+          <!-- <li><a href="#">promoções</a></li> -->
+          <li><a href="#">contacto</a></li>
+          <a href="#" class="btn"> orçamento grátis</a></li>
+        </ul>
+      </nav>
+    </div>
 
-
-
-
-    <!-- <nav>
-      <a href="#" class="hide-desktop">
-        <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
-      </a>
-      <ul class="fa-solid:ellipsis-v" id="nav">
-        <li><a href="#">inicio</a></li>
-        <li><a href="#">promoções</a></li>
-        <li><a href="#">servicos</a></li>
-        <li><a href="#">acerca de nós</a></li>
-        <li><a href="#">contacto</a></li>
-        <a href="#" class="btn"> orçamento grátis</a></li>
-      </ul>
-    </nav> -->
-  </header>
-
-  <section class="hero-bg">
     <div class="container">
-      <h1 class=slogan>A sua Oficina Automóvel em Barcelos</h1>
+      <h1 class=slogan>A sua Oficina Multimarcas em Barcelos</h1>
       <a href="https://www.google.pt/maps/place/Auto+Ismael+Lda/@41.5243792,-8.6000047,13.53z/data=!4m5!3m4!1s0xd2453fc37e7da43:0xb5671264f5a9ae37!8m2!3d41.5232479!4d-8.5789267"
         class="btn" target="_blank">Obter direcções</a>
     </div>
+
+  </header>
+
+<section class="" id="why-us">
+  <div class="summary">
+    <p> Quais as vantagens de fazer a revisão na nossa oficina?</p>
+    <a href="#" class="btn">Saber mais</a>
+  </div>
+</section>
+
+  <section id="services">
+      <p class="section-title">Serviços disponíveis</p>
+    <div class="container">
+      <div class="card">
+      <img src="assets/images/engine.png"/>
+      <h2>Mecânica geral</h2>
+      <p>Toda a mecânica dos veículos</p>
+      <a href="#" class="primary-color">Saber mais</a>
+    </div> 
+    <div class="card">
+      <img src="assets/images/electricidade.png"/>
+      <h2>Electricidade</h2>
+      <p>Toda a parte eléctrica e electrónica dos veículos</p>
+      <a href="#" class="primary-color">Saber mais</a>
+    </div> 
+    <div class="card">
+      <img src="assets/images/ar-condicionado.png"/>
+      <h2>Ar Condicionado</h2>
+      <p>Carga, recarga ou manutenção do ar condicionado dos veículos</p>
+      <a href="#" class="primary-color">Saber mais</a>
+    </div> 
+    <div class="card">
+      <img src="assets/images/pneus.png"/>
+      <h2>Adicionais</h2>
+      <p>Alinhamento direcção, pneumáticos, etc...</p>
+      <a href="#" class="primary-color">Saber mais</a>
+    </div> 
+  </div>
   </section>
 
   <section id="sale">
@@ -122,14 +140,11 @@
   </footer>
 
   <!-- Back to top button -->
-  <a id="back-to-top" href="#" class="fas fa-chevron-up"></a>
+  <a id="back-to-top" href="#" class="fas fa-chevron-up"></a> 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="app.js"></script>
   <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

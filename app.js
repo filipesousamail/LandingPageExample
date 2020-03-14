@@ -8,6 +8,15 @@ $(document).ready(function () {
         }
     }, 250));
 
+    const nav = $('#nav')
+    $('.menu-icon').click(function() {
+        nav.toggleClass('show');
+      });
+
+      $('nav li a').click(function() {
+        nav.toggleClass('show');
+      });
+
 });
 
 function debounce(func, wait, immediate) {

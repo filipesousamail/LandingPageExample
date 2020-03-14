@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
 
-$primary: rgb(255, 204, 9);
+$primary: rgba(241, 196, 15, 1);
+$background-grey: rgba(236, 240, 241, 1);
 $striped-grey: rgb(245, 245, 245);
 $light-grey: rgb(165, 164, 164);
 $white: rgb(255, 255, 255);
@@ -15,12 +16,11 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  margin-right: -1px;
 }
 
 body {
   font-size: 1.2rem;
-  // display: grid;
-  // grid-template: 10% 1fr 10%;
 }
 
 ul,
@@ -33,6 +33,10 @@ a {
   color: inherit;
   cursor: pointer;
   opacity: 0.9;
+}
+
+h1 {
+  font-weight: 400;
 }
 
 input[type="color"],
@@ -68,10 +72,11 @@ section {
   background-color: $primary;
   color: $white;
   text-transform: uppercase;
-  font-weight: 800;
+  // font-weight: 800;
   text-align: center;
   padding: 10px 5px;
-  font-size: 0.7rem;
+  font-size: 1rem;
+  display: block;
 
   &.btn-flat {
     background-color: transparent;
@@ -89,56 +94,94 @@ section {
 
 .container {
   text-align: center;
-  width: 100vw;
-}
-
-#nav {
-  // display: flex;
-  // flex-direction: column;
-  // height: 100vh;
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header {
-  color: $blue;
-  position: absolute;
-  width: 100%;
-  z-index: 1000;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  // padding: 1.5rem 5% 0;
-
-  .hide-mobile {
-    display: none;
-  }
+  height: 100vh;
+  color: $white;
+  background: 
+  /* top transparent blue */ linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)),
+    /* bottom, image */ url(../images/back3.jpg) center;
+  background-size: cover;
+  padding: 1rem 0;
 
   & .logo {
-    width: 130px;
+    width: 120px;
   }
 
-  & .menu {
-    background-color: $white;
+  & .row {
+    display: flex;
+    align-items: baseline;
+    max-width: 90%;
+    margin: auto;
   }
 
-  & nav{
-    width: 100%;
+  & nav {
+    text-align: center;
+    text-transform: capitalize;
+
+    & > a {
+      // padding-left: 85%;
+    }
+
+    & ul {
+      position: absolute;
+      right: 0px;
+      left: 0px;
+      // height: 70vh;
+      //   width: 90vw;
+      max-width: 269px;
+      margin: 0.3rem 0.3rem 0 auto;
+      z-index: 1000;
+      background-color: rgba(44, 62, 80, 1);
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
+
+      & .btn {
+        // margin-top: 1rem;
+      }
+
+      &.show {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      & li {
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+
+        & a {
+          border-bottom: 2px solid transparent;
+          transition: border-bottom 0.3s linear;
+
+          &:hover {
+            border-bottom: 2px solid $primary;
+          }
+        }
+      }
+    }
   }
-  // & nav {
-  //   color: $white;
-  //   background-color: red;
-  //   height: 100vh;
-  //   text-align: center;
-  //   display: flex;
-  //   flex-direction: column;
 
-  //   & a {
-  //     text-align: right;
-  //   }
+  & .slogan {
+    padding-bottom: 1rem;
+  }
 
-  //   & li {
-  //     margin-right: 1.5rem;
-  //   }
-  // }
+  & .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // margin-top: 11rem;
+
+    & .btn {
+      max-width: 12rem;
+      margin: auto;
+    }
+  }
 }
 
 p.section-title {
@@ -163,6 +206,64 @@ section.hero-bg {
   .container {
     & .slogan {
       margin-bottom: 2rem;
+    }
+  }
+}
+
+section#services {
+  & .section-title {
+    padding: 2rem;
+    // color: $light-grey;
+    text-align: center;
+  }
+
+  & .container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 1rem;
+  }
+
+  & .card:nth-child(even) {
+    padding-top: 4rem;
+  }
+
+  & .card:nth-child(odd) {
+    height: 90%;
+  }
+
+  & .card {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.151);
+    border-radius: 8px;
+    text-align: center;
+    padding: 2rem;
+    transform: translateY(0);
+    transition: 0.3s;
+    width: 20rem;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+
+    & img {
+      max-width: 100%;
+      margin: auto;
+    }
+
+    & h2 {
+      padding: 0.5rem;
+    }
+
+    & p {
+      font-size: 1.1rem;
+    }
+
+    & a {
+      font-size: 1rem;
+      color: $primary;
+      padding: 1rem;
+      display: block;
     }
   }
 }
