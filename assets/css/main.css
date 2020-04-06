@@ -128,7 +128,7 @@ section:nth-child(odd) {
 .header-wrapper .navbar-navigation {
   border-radius: 0.5rem;
   width: 20rem;
-  background-color: rgba(22, 26, 35, 0.97);
+  background-color: rgba(12, 20, 39, 0.98);
   box-shadow: 10px 10px 6px -6px rgba(0, 0, 0, 0.82);
   position: absolute;
   top: 5.5rem;
