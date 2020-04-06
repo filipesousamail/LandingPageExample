@@ -1,0 +1,238 @@
+.spacer {
+  flex-grow: 1;
+}
+
+.navbar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95vw;
+  margin: 1.5rem auto 0 auto;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  .logo {
+    width: 20rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .right-side {
+    display: flex;
+    align-items: center;
+
+    .btn{
+        font-size: 1.4rem;
+        margin-right: 1rem;
+    }
+  }
+
+  .hamburger-menu {
+    display: flex;
+    cursor: pointer;
+    padding: 0.2rem;
+    background-color: rgba(color(background-blue), 0.5);
+    border-radius: 10%;
+    z-index: 200;
+
+    &__svg {
+      // transform: rotate(180deg);
+      width: 3.3rem;
+      height: 3rem;
+      fill: white;
+
+      & > * {
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &-navigation {
+      border-radius: .5rem;
+    width: 30rem;
+    // height: calc(100vh - 7rem);
+    background-color: rgba(57, 63, 78, 0.949);
+    position: absolute;
+    top: 7rem;
+    right: -100vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    z-index: 100;
+    transition: right 0.3s cubic-bezier(1, 0, 0, 1);
+    @media (max-width: 800px) {
+      width: 30rem;
+      right: -100vw;
+    }
+  }
+
+  .nav-list {
+    width: 100%;
+
+    &-item {
+      list-style: none;
+    }
+
+    &-link {
+      font-family: $font-primary;
+      font-size: 2.5rem;
+      text-transform: capitalize;
+      color: color("white");
+      text-decoration: none;
+      display: block;
+      margin: 2rem;
+      text-align: center;
+      transition: all 0.5s;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.2rem;
+        bottom: 0;
+        left: 0;
+        background-color: color(primary);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.2rem;
+        top: 0;
+        right: 0;
+        background-color: color(primary);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      &:hover {
+        color: color(primary);
+        letter-spacing: 0.2rem;
+
+        &::before {
+          transform: scaleX(1);
+        }
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+
+      @media (max-width: 600px) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+#check:checked ~ .navbar-navigation {
+  right: 0;
+}
+
+#check:checked ~ .hamburger-menu {
+  .hamburger-menu__svg {
+    &__a {
+      transform: rotate(-45deg);
+      transform-origin: 65%;
+    }
+
+    &__b {
+      opacity: 0;
+    }
+
+    &__c {
+      transform: rotate(45deg);
+      transform-origin: 65%;
+    }
+  }
+}
+
+header {
+  background: linear-gradient(rgba(color(background-blue), 0.7), rgba(color(background-blue), 0.7)),
+    url("../images/back3.jpg") center no-repeat;
+  background-size: cover;
+  @include flexLayout;
+  flex-direction: column;
+  height: 80vh;
+
+  .header-cta {
+    width: 80%;
+    @include flexLayout;
+    flex-direction: column;
+    font-size: 2.5rem;
+    color: color("white");
+
+    & > *:not(:last-child) {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+section.about {
+  a {
+    text-decoration: underline;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+section.services {
+  & .container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 1rem;
+  }
+
+  & .card:nth-child(even) {
+    padding-top: 4rem;
+  }
+
+  & .card:nth-child(odd) {
+    height: 90%;
+  }
+
+  & .card {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.151);
+    border-radius: 8px;
+    text-align: center;
+    padding: 2rem;
+    transform: translateY(0);
+    transition: 0.3s;
+    width: 20rem;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+
+    img {
+      max-width: 100%;
+      margin: auto;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    a {
+      font-size: 1rem;
+      color: color(primary);
+      padding: 1rem;
+      display: block;
+    }
+  }
+}

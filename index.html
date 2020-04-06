@@ -6,74 +6,138 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
-  <link rel="stylesheet" href="assets/css/index.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Josefin+Sans:300,400,600,700|Nunito:300,400,600,700|Poppins:300,400,600,700"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css">
   <title>Auto Ismael</title>
 </head>
 
 <body>
-  <header>
-    <div class="row">
-      <img src="assets/images/logo2.svg" alt="auto ismael logo" class="logo">
-<div class="spacer" style="flex-grow: 1;"></div>
-      <nav>
-        <a href="#" class="hide-desktop">
-          <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
-        </a>
-        <ul class="fa-solid:ellipsis-v" id="nav">
-          <li><a href="#">inicio</a></li>
-          <li><a href="#">porquê nós</a></li>
-          <li><a href="#">servicos</a></li>
-          <!-- <li><a href="#">promoções</a></li> -->
-          <li><a href="#">contacto</a></li>
-          <a href="#" class="btn"> orçamento grátis</a></li>
-        </ul>
-      </nav>
+
+  <nav class="navbar">
+
+    <div class="logo">
+      <img src="./assets/images/logo1.svg" alt="Auto Ismael logo">
     </div>
 
-    <div class="container">
+    <div class="right-side">
+      <a href="#" class="btn">Orçamento</a>
+
+      <div class="hamburguer-menu-wrapper">
+        <input type="checkbox" id="check" class="checkbox" hidden />
+        <label for="check" class="hamburger-menu">
+          <svg class="hamburger-menu__svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1024" height="1024"
+            viewBox="0 0 1024 1024">
+            <path class="hamburger-menu__svg__a"
+              d="M3.633 262.244c-4.163-29.138 16.65-58.276 45.789-62.439 4.163 0 8.325 0 16.65 0h894.959c29.138-4.163 58.276 16.65 62.439 45.789 0 4.163 0 8.325 0 16.65 4.163 29.138-16.65 58.276-45.789 62.439-4.163 0-8.325 0-16.65 0h-894.959c-29.138 4.163-58.276-16.65-62.439-45.789 0-8.325 0-12.488 0-16.65z">
+            </path>
+            <path class="hamburger-menu__svg__b"
+              d="M3.633 512c-4.163-29.138 16.65-58.276 45.789-62.439 4.163 0 8.325 0 16.65 0h645.203c29.138-4.163 58.276 16.65 62.439 45.789 0 4.163 0 8.325 0 16.65 4.163 29.138-16.65 58.276-45.789 62.439-4.163 0-8.325 0-16.65 0h-645.203c-29.138 4.163-58.276-16.65-62.439-45.789 0-8.325 0-12.488 0-16.65z">
+            </path>
+            <path class="hamburger-menu__svg__c"
+              d="M3.633 761.756c-4.163-29.138 16.65-58.276 45.789-62.439 4.163 0 8.325 0 16.65 0h894.959c29.138-4.163 58.276 16.65 62.439 45.789 0 4.163 0 8.325 0 16.65 4.163 29.138-16.65 58.276-45.789 62.439-4.163 0-8.325 0-16.65 0h-894.959c-29.138 4.163-58.276-16.65-62.439-45.789 0-8.325 0-12.488 0-16.65z">
+            </path>
+          </svg>
+        </label>
+
+        <div class="navbar-navigation">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="#" class="nav-list-link">Início</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-list-link">Sobre nós</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-list-link">Serviços</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#" class="nav-list-link">Contactos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+
+
+
+  <header>
+    <div class="header-cta">
       <h1 class=slogan>A sua Oficina Multimarcas em Barcelos</h1>
-      <a href="https://www.google.pt/maps/place/Auto+Ismael+Lda/@41.5243792,-8.6000047,13.53z/data=!4m5!3m4!1s0xd2453fc37e7da43:0xb5671264f5a9ae37!8m2!3d41.5232479!4d-8.5789267"
-        class="btn" target="_blank">Obter direcções</a>
+      <!-- <a href="https://www.google.pt/maps/place/Auto+Ismael+Lda/@41.5243792,-8.6000047,13.53z/data=!4m5!3m4!1s0xd2453fc37e7da43:0xb5671264f5a9ae37!8m2!3d41.5232479!4d-8.5789267"
+        class="btn" target="_blank">Obter direcções</a> -->
+      <a href="#" class="btn">Agendar Visita</a>
     </div>
 
   </header>
 
-<section class="" id="why-us">
-  <div class="summary">
-    <p> Quais as vantagens de fazer a revisão na nossa oficina?</p>
-    <a href="#" class="btn">Saber mais</a>
-  </div>
-</section>
+  <section class="about">
+    <div class="grid">
+      <h2>Sobre a Auto Ismael</h2>
+      <p>A Auto Ismael, é uma oficina de reparações automóveis multi-marca, sediada em <a
+          href="https://www.google.pt/maps/place/Auto+Ismael+Lda/@41.5243792,-8.6000047,13.53z/data=!4m5!3m4!1s0xd2453fc37e7da43:0xb5671264f5a9ae37!8m2!3d41.5232479!4d-8.5789267"
+          target="_blank">Barcelos, Braga.</a> Sob a gerência de Augusto Ismael, dispomos de profissionais
+        especializados
+        Bosch Car Service, para a completa manutenção e reparação do seu automóvel. </p>
+      <p>Cuidamos das necessidades do seu automóvel e cobrimos uma variedade de modelos, quer necessite de uma revisão
+        completa, trabalhos de chapa, mudança de filtros de óleo, serviço de inspeção, ou se simplesmente está com um
+        problema com o seu carro e necessita que um profissional o veja, podemos ajudá-lo.</p>
+      <p>Oferecemos os melhores preços para garantir que obtêm a melhor relação qualidade/preço. Os nossos mecânicos
+        possuem anos de experiência numa grande variedade de modelos e tipos de carro, pelo que pode estar confiante de
+        que o seu carro ficará nas melhores mãos.</p>
+      <p>É indispensável verificar a exacta experiência da oficina antes de lhe confiar o seu carro, o seu automóvel é
+        um
+        investimento e reconhecemos a importância de tratá-lo com o devido cuidado e respeito.</p>
+      <p>Ligue-nos para saber mais sobre o nosso serviço completo ou passe por cá e será assistido por um dos nossos
+        simpáticos colaboradores.</p>
+      <p>Última actualização: 10/02/2020</p>
+    </div>
+  </section>
 
-  <section id="services">
-      <p class="section-title">Serviços disponíveis</p>
+  <section class="services">
+    <h2>Serviços disponíveis</h2>
     <div class="container">
       <div class="card">
-      <img src="assets/images/engine.png"/>
-      <h2>Mecânica geral</h2>
-      <p>Toda a mecânica dos veículos</p>
-      <a href="#" class="primary-color">Saber mais</a>
-    </div> 
-    <div class="card">
-      <img src="assets/images/electricidade.png"/>
-      <h2>Electricidade</h2>
-      <p>Toda a parte eléctrica e electrónica dos veículos</p>
-      <a href="#" class="primary-color">Saber mais</a>
-    </div> 
-    <div class="card">
-      <img src="assets/images/ar-condicionado.png"/>
-      <h2>Ar Condicionado</h2>
-      <p>Carga, recarga ou manutenção do ar condicionado dos veículos</p>
-      <a href="#" class="primary-color">Saber mais</a>
-    </div> 
-    <div class="card">
-      <img src="assets/images/pneus.png"/>
-      <h2>Adicionais</h2>
-      <p>Alinhamento direcção, pneumáticos, etc...</p>
-      <a href="#" class="primary-color">Saber mais</a>
-    </div> 
-  </div>
+        <img src="assets/images/engine.png" />
+        <h2>Mecânica geral</h2>
+        <p>Toda a mecânica dos veículos</p>
+        <a href="#" class="primary-color">Saber mais</a>
+      </div>
+      <div class="card">
+        <img src="assets/images/electricidade.png" />
+        <h2>Electricidade</h2>
+        <p>Toda a parte eléctrica e electrónica dos veículos</p>
+        <a href="#" class="primary-color">Saber mais</a>
+      </div>
+      <div class="card">
+        <img src="assets/images/ar-condicionado.png" />
+        <h2>Ar Condicionado</h2>
+        <p>Carga, recarga ou manutenção do ar condicionado dos veículos</p>
+        <a href="#" class="primary-color">Saber mais</a>
+      </div>
+      <div class="card">
+        <img src="assets/images/pneus.png" />
+        <h2>Adicionais</h2>
+        <p>Alinhamento direcção, pneumáticos, etc...</p>
+        <a href="#" class="primary-color">Saber mais</a>
+      </div>
+    </div>
   </section>
+
+
+
+  <!-- <section class="" id="why-us">
+    <div class="summary">
+      <p> Quais as vantagens de fazer a revisão na nossa oficina?</p>
+      <a href="#" class="btn">Saber mais</a>
+    </div>
+  </section>
+
+ 
 
   <section id="sale">
     <div class="container">
@@ -126,9 +190,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <footer>
+  <!-- <footer>
     <ul>
       <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
       <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
@@ -137,10 +201,10 @@
     <p>Made by r&f,
       <script> document.write(new Date().getFullYear()); </script>
     </p>
-  </footer>
+  </footer> -->
 
   <!-- Back to top button -->
-  <a id="back-to-top" href="#" class="fas fa-chevron-up"></a> 
+  <!-- <a id="back-to-top" href="#" class="fas fa-chevron-up"></a> -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="app.js"></script>

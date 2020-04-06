@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Gotu&display=swap");
+
+$font-dancing-script: "Dancing Script", cursive;
+$font-josefin-sans: "Josefin Sans", sans-serif;
+$font-nunito: "Nunito", sans-serif;
+$font-poppins: "poppins", "sans-serif";
+$font-primary: "Poppins", "sans-serif";
+$font-secondary: "Gotu", "sans-serif";
+
+$max-site-width: 1200px;
+
+$colors: (
+  "primary": rgb(255, 204, 9),
+  "secondary": rgb(10, 48, 65),
+  "dark": rgb(38, 38, 38),
+  "white": rgb(255, 255, 255),
+  "dark-grey": rgb(92, 91, 91),
+  "light-grey": rgb(245, 245, 245),
+  "background-blue":rgb(19, 30, 55)
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+@mixin flexLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: $font-primary;
+  font-size: 62.5%;
+  color: color(dark-grey);
+}
+
+body{
+    margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3rem;
+  color: color(primary);
+  margin-bottom: 2rem;
+}
+
+section {
+  padding: 3rem 6rem;
+  font-size: 1.6rem;
+  hyphens: auto;
+
+  &:nth-child(odd){
+      background-color: color(light-grey);
+  }
+}
+
+.grid{
+    max-width: $max-site-width;
+    margin: auto;
+}
